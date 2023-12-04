@@ -5,7 +5,7 @@ def get_file_name(year: int, question: int, test: bool = False) -> str:
     test_str = 'test_' if test else ''
 
     file_name_one = f"{year}/question_{test_str}{question}_input.txt"
-    file_name_two = f"{year}/{question}{test_str}_input.txt"
+    file_name_two = f"{year}/{question}_{test_str}input.txt"
 
     if os.path.isfile(file_name_one):
         return file_name_one
